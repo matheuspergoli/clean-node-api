@@ -1,10 +1,12 @@
 {
-	// Opções para passar no compilador do typescript
-	"compilerOptions": {
-		"outDir": "./dist", // Diretório onde será compilado o typescript
-		"module": "CommonJS", // Para poder usar import/export e no final compilar para require
-		"target": "ES2020", // Versão para qual o typescript irá compilar
+  // Opções para passar no compilador do typescript
+  "compilerOptions": {
+    "outDir": "./dist", // Diretório onde será compilado o typescript
+    "module": "CommonJS", // Para poder usar import/export e no final compilar para require
+    "target": "ES2020", // Versão para qual o typescript irá compilar
     "esModuleInterop": true, // Converte import/export em arquivos que ainda usam require
-    "allowJs": true // Permite incluir no dist arquivos JS
+    "allowJs": true, // Permite incluir no dist arquivos JS
+    "strict": true,
+    "strictNullChecks": true
   }
 }
