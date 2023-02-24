@@ -12,6 +12,6 @@ export class SignUpController {
       }
     }
 
-    return BadRequest(new Error('Bad Request'))
+    return BadRequest(new Error('All fields is required'))
   }
 }
