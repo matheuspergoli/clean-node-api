@@ -1,4 +1,4 @@
-import { badRequest, serverError } from '../helpers/http-helper'
+import { badRequest, serverError } from '../helpers'
 import { InvalidParamError, MissingParamError } from '../errors'
 import type { HttpRequest, HttpResponse, EmailValidator, Controller } from '../protocols'
 
