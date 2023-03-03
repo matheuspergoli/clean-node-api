@@ -27,7 +27,10 @@ export default {
   },
 
   // The glob patterns Jest uses to detect test files
-  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[tj]s?(x)']
+  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[tj]s?(x)'],
+
+  // A preset that is used as a base for Jest's configuration
+  preset: '@shelf/jest-mongodb'
 
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -111,9 +114,6 @@ export default {
 
   // An enum that specifies notification mode. Requires { notify: true }
   // notifyMode: "failure-change",
-
-  // A preset that is used as a base for Jest's configuration
-  // preset: undefined,
 
   // Run tests from one or more projects
   // projects: undefined,
