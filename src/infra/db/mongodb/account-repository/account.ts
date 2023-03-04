@@ -13,11 +13,6 @@ export class AccountMongoRepository implements AddAccountRepository {
       id: result.insertedId as unknown as string
     })
 
-    return {
-      id: account.id,
-      name: account.name,
-      email: account.email,
-      password: account.password
-    }
+    return MongoHelper.map(account)
   }
 }
