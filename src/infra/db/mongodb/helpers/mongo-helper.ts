@@ -1,4 +1,4 @@
-import { MongoClient, type MongoClientOptions } from 'mongodb'
+import { MongoClient, type MongoClientOptions, type Collection } from 'mongodb'
 
 const mongoOptions = {
   useNewUrlParser: true,
@@ -17,5 +17,9 @@ export const MongoHelper = {
 
   async disconnect(): Promise<void> {
     await this.client.close()
+  },
+
+  getCollection(name: string): Collection {
+    return this.client.db().collection(name)
   }
 }
