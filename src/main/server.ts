@@ -1,5 +1,11 @@
+import env from './config/env'
 import { app } from './config/app'
+import { MongoHelper } from '../infra/db/mongodb/helpers/mongo-helper'
 
-app.listen(3000, () => {
-  console.log('Server running at http://localhost:3000')
-})
+void MongoHelper.connect(env.mongoUrl)
+  .then(async () => {
+    app.listen(env.port, () => {
+      console.log(`Server running at http://localhost:${env.port}`)
+    })
+  })
+  .catch(console.error)
