@@ -1,0 +1,14 @@
+name: Teste de CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Instalar dependências
+      run: npm install
+    - name: Executar testes
+      run: npm test
